@@ -1,0 +1,55 @@
+footer{
+    box-sizing: border-box;
+    border-top: 2px groove $colorButton;
+    width: 100%;
+}
+.foot{
+    @include flexbox(row, nowrap, space-between, flex-start);
+    margin: 38px 248px;
+
+    @media screen and (max-width: 1440px){
+        margin: 38px 37px 20px 39px;
+    }
+
+    @media screen and (max-width: 767px){
+        @include flexbox(column, nowrap, space-between, center);
+        margin: 21px 20px 22px 20px;
+    }
+
+    .logo{
+        @include font($fontMain, 16px, 20px, $colorButton);
+        @media screen and (max-width: 767px){
+            margin-bottom: 13px;
+        }
+    }
+
+    .fooH4{
+        @include font($fontBold, 14px, 17px, $colorTitle);
+        text-align: center;
+    }
+
+    span{
+        @include font($fontBold, 10px, 12px, #CCCCCC);
+        letter-spacing: 1px;
+        @media screen and (max-width: 767px){
+            margin: 15px 0 7px;
+        }
+    }
+
+    ul{
+        margin-top: 11px;
+        text-decoration: none;
+        @media screen and (max-width: 767px){
+            margin: 1px 20px 6px 20px;
+        }
+    }
+    
+    li{
+        @include font($fontSecond, 14px, 26px, #999999); 
+        @media screen and (max-width: 767px){
+            display: inline;
+            padding: 10px;
+        }
+    }
+}
+

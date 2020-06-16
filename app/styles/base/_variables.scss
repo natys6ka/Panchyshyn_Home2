@@ -1,0 +1,24 @@
+
+@font-face{
+    font-family: Montserrat-Normal;
+    src: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+@font-face{
+    font-family: Montserrat-Bold;
+    src: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/fonts/Montserrat/Montserrat-Bold.ttf);
+}
+@font-face{
+    font-family: Roboto300;
+    src: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/fonts/Roboto/Roboto-Light.ttf);
+}
+
+$fontMain: Montserrat-Normal;
+$fontBold: Montserrat-Bold;
+$fontSecond: Roboto300;
+
+$colorMain: #FFFFFF;
+$colorSecond: #F7F3F2;
+$colorText: #E3E3E3;
+$colorButton: #FF4E50;
+$colorTitle: #444444;
+$colorSearch: #666666;

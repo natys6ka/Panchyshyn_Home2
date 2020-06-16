@@ -1,0 +1,338 @@
+body{
+    background-color: $colorMain;
+    @include flexbox(column, nowrap, center, flex-start);
+    position: relative;
+}
+.container{
+    width: 940px;
+    height: 2296px;
+    margin: 95px auto 100px auto;
+    @media screen and (max-width: 1440px){
+        width: 100%;
+        height: 2540px;
+        margin: 95px 0 100px 0;
+    }
+    @media screen and (max-width: 767px){
+        height: max-content; //3097px;
+        margin: 35px 0 40px 0;
+    }
+    
+    .container__title{
+        @include font($fontBold, 26px, 32px, $colorTitle);
+        text-align: center;
+
+        @media screen and (max-width: 1440px){
+            font-size: 22px;
+            line-height: 27px;
+        }
+    }
+
+    .dreamshare{
+        width: 100%;
+        height: max-content; //461px
+
+        .dreamshare__blocks{
+            @include flexbox(row, nowrap, space-between, stretch);
+            @media screen and (max-width: 767px){
+                @include flexbox(column, nowrap, space-between, flex-end);
+            }
+            .dreamshare__oneBlock{
+                margin-top: 35px;
+                width: 300px;
+                height: 400px;
+                padding: 0 25px 21px 25px;
+
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%);
+                border-radius: 4px;
+                background-size: cover;
+                background-position: center;
+
+                @include flexbox(column, nowrap, flex-end, flex-start);
+
+                @media screen and (max-width: 1440px){
+                    width: 32vw;
+                    height: 400px;
+                    padding: 0 20px 16px 20px;
+                }
+                @media screen and (max-width: 767px){
+                    width: 100%;
+                    height: 33vh;
+                    padding: 0 30px 16px 20px;
+                }
+
+                .dreamshare__oneBlock__step{
+                    @include font($fontMain, 10px, 12px, $colorMain);
+                    padding: 5px 13px ;
+
+                    width: 70px;
+                    height: 20px;
+                    background: $colorButton;
+                    border-radius: 40px;
+
+                    text-align: left;
+                }
+                .dreamshare__oneBlock__title{
+                    @include font($fontBold, 24px, 26px, $colorMain);
+                    margin: 15px 0 10px 0;
+                    @media screen and (max-width: 1440px){
+                        margin: 45px 0 30px 0;
+                        // line-height: 14px;
+                    }
+                    @media screen and (max-width: 767px){
+                        margin: 45px 0 26px 0;
+                    }
+                }
+                .dreamshare__oneBlock__text{
+                    @include font($fontSecond, 14px, 14px, $colorText);
+                }
+            }
+            .block1{background-image:  url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/works1.png);}
+            .block2{background-image: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/works2.png);}
+            .block3{background-image: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/works3.png);}
+        }
+        
+    }
+
+    .partner{
+        width: 100%;
+        height: max-content;
+        margin: 95px 0;
+        @media screen and (max-width: 1440px){
+            width: 492px;
+            // height: 605px;
+            margin: 95px auto;
+        }
+        @media screen and (max-width: 768px){
+            width: 100%;
+            // height: max-content; //1273px;
+            margin: 36px 0;
+        }
+
+        .partner__blocks{
+            width: 100%;
+            @include flexbox(row, nowrap, space-between, stretch);
+
+            @media screen and (max-width: 1440px){
+                @include flexbox(row, wrap, space-between, stretch);
+            }
+
+            @media screen and (max-width: 768px){
+                @include flexbox(column, nowrap, flex-start, center);
+            }
+            .partner__blocks__person{
+                width: 221px;
+                height: 205px;
+                margin: 35px 0 35px 0;
+                @include flexbox(column, nowrap, center, center);
+
+                @media screen and (max-width: 1440px){
+                    width: 236px;
+                }
+                @media screen and (max-width: 768px){
+                    margin: 16px 0 16px;
+                }
+
+                .partner__person__img{
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    background-color: #D8D8D8;
+                        
+                    background-size: cover;
+                    background-position: center;
+                    
+                }
+
+                .partner__person__title{
+                    @include font($fontBold, 14px, 17px, $colorTitle);
+                    margin: 17px 0 12px;
+                }
+
+                .partner__person__descr{
+                    @include font($fontSecond, 14px, 14px, $colorSearch);
+                    text-align: center;
+                }
+
+                    .pers1{background-image: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/BradleyHunter.png);}
+                    .pers2{background-image: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/MarieBennett.png);}
+                    .pers3{background-image: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/DianaWells.png);}
+                    .pers4{background-image: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/ChristopherPierce.png);}
+            }
+        }
+
+        .partner__button{
+            display: flex;
+            justify-content: center;
+
+            .partner_btn{
+                @include font($fontBold, 14px, 17px, $colorButton);
+                width: 180px;
+                height: 40px;
+                background: colorMain;
+                border: 2px solid $colorButton;
+                border-radius: 40px;
+
+                @media screen and (max-width: 1440px){
+                    margin-top: 5px;
+                }
+
+                @media screen and (max-width: 768px){
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    
+    .ideas{
+        width: 100%;
+        height: max-content; //1031px;
+        @include flexbox(column, nowrap, space-between, stretch);
+
+        @media screen and (max-width: 1440px){
+            width: 748px;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 767px){
+            // height: 987px;
+        }
+
+        .ideas1{
+            @include flexbox(row, nowrap, space-between, flex-start);
+            @media screen and (max-width: 767px){
+                @include flexbox(column, nowrap, space-between, center);
+            }
+
+            .ideas__box{
+                background: #000000;
+                border-radius: 4px;
+                margin-top: 15px;
+                @include font($fontBold, 22px, 27px, $colorMain);
+                @include flexbox(column, wrap, center, center);
+                text-align: center;
+              
+                background-size: cover;
+                background-position: center;
+
+                box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.2) ;
+            }
+            
+            .one{
+                width: 300px;
+                height: 310px;
+                margin-top: 20px;
+
+                @media screen and (max-width: 1440px){
+                    width: 236px;
+                }
+
+                @media screen and (max-width: 767px){
+                    width: 300px;
+                    height: 120px;
+                    margin-top: 10px;
+                }
+            }
+
+            .small{
+                width: 300px;
+                height: 310px;
+                margin-top: 20px;
+
+                @media screen and (max-width: 1440px){
+                    width: 236px;
+                }
+
+                @media screen and (max-width: 767px){
+                    width: 300px;
+                    height: 120px;
+                    margin-top: 10px;
+                }
+            }
+
+            .big{
+                width: 620px;
+                height: 310px;
+                margin-top: 20px;
+
+                @media screen and (max-width: 1440px){
+                    width: 492px;
+                }
+
+                @media screen and (max-width: 767px){
+                    width: 300px;
+                    height: 120px;
+                    margin-top: 10px;
+                }
+            }
+            
+            .sport{background-image: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/sport.png);}
+            .health{background-image: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/health.png);}
+            .extreme{background-image: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/extreme.png);}
+            .game{background-image: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/game.png);}
+            .culture{background-image: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/culture.png);}
+            .relax{background-image: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/relax.png);}
+            .travel{background-image: url(D:/Logos/JS-advance/Panchyshyn_Home2/app/photo/travel.png);}        
+        }
+    }
+
+    .interests{
+        width: 482px;
+        height: 158px;
+        margin: 95px auto 0 auto;
+
+        @media screen and (max-width: 767px){
+            width: 415px;
+            height: max-content; //192px;
+            margin: 35px auto 0 auto;
+            padding: 0 20px;
+        }
+
+        .interests__text{
+            @include font($fontSecond, 18px, 14px, $colorSearch);
+            text-align: center;
+            margin: 43px 32px 25px 35px;
+
+            @media screen and (max-width: 767px){
+                margin: 9px 0 15px;
+            }
+        }
+
+        .interests__search{
+
+            #interests__input{
+                width: 299px;
+                height: 40px;
+                background: $colorMain;
+                border: 1px solid #D4D4D4;
+                box-sizing: border-box;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+                border-radius: 3px;
+                @include font($fontSecond, 14px, 16px, #999999);
+                padding: 14px 0 10px 14.62px;
+                @media screen and (max-width: 767px){
+                    margin-bottom: 10px;
+                    width: 280px;
+                }
+            }
+
+            .interests__btn{
+                width: 172.12px;
+                height: 40px;
+                background: $colorButton;
+                border-radius: 40px;
+                border: 0;
+                @include font($fontBold, 14px, 17px, $colorMain);
+                @media screen and (max-width: 767px){
+                    width: 280px;
+                    height: 40px;
+                }
+            }
+
+            @media screen and (max-width: 767px){
+                @include flexbox(column, wrap, center, center);
+            }
+        }
+
+    } 
+
+}
