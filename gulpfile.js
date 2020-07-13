@@ -80,8 +80,8 @@ function html(){
 }
 
 function fonts() {
-    return gulp.src(path.fonts.src)
-        .pipe(gulp.dest(path.fonts.dest))
+    return gulp.src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dest))
         .pipe(browserSync.stream())
 }
 
